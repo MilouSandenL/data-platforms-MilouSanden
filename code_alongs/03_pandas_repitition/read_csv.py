@@ -5,7 +5,8 @@ from pathlib import Path
 
 data_path = Path(__file__).parent / "data"
 
-df = pd.read_csv(data_path / "calaries.csv")
+df = pd.read_csv(data_path / "calories.csv")
 
 print(df.head())
+
 
