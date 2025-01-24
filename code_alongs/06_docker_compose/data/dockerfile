@@ -1,0 +1,15 @@
+# olika layers i docker. detta är base layer --> startar här från en existerande image
+FROM python:3.13
+
+# instructing layer --> vart vi vill starta i containern. detta blir 'starting point' börjar i 'app'
+WORKDIR /app
+
+# instructing layer --> kopierar in allt från hostsystemet in till containern 'app'
+COPY . .
+
+# instructing layer --> installerar paket (kör bash kommando)
+# installerar allt som är specifierat i requirements - skicka till annan så man har samma miljö
+RUN pip install -r requirements.txt
+
+# instruction layer --> bash command to run when 
+CMD  [ "python","main.py" ]

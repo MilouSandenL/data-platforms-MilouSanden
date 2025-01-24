@@ -1,0 +1,3 @@
+# kan vara bra att speca versioner
+pandas
+matplotlib
